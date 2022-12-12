@@ -1,0 +1,1449 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&family=Exo&display=swap');
+
+
+
+/*  * font-family: 'Permanent Marker', cursive;
+font-family: 'Amaranth', sans-serif;
+* font-family: 'Exo', sans-serif; */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+
+}
+
+:root {
+  --color1: rgb(31, 12, 158);
+  --color2: rgb(236, 52, 52);
+  --color3: rgb(52, 52, 52);
+  --color4: rgba(87, 62, 251, 0.11);
+  --color6: rgba(29, 29, 31, 0.59);
+  --color7: rgba(46, 47, 93, 0.682);
+  --color8: rgb(7, 18, 89);
+  --primary-color: #fff;
+  --secundary-color: #000;
+}
+
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+.dark__mode {
+  --primary-color: #000;
+  --secundary-color: #fff;
+}
+
+.show {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.contenedor_menu {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Navbar Start */
+.menu {
+  height: 160px;
+  width: 100%;
+}
+
+#logomovil {
+  display: none;
+}
+
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 100%;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.container__logo {
+  margin: 5px 0 5px 10px;
+  height: 140px;
+  width: 500px;
+  display: flex;
+}
+
+
+.container__logo>img {
+  background-size: cover;
+  height: 120px;
+  width: 160px;
+}
+
+.menu__links {
+  height: 70%;
+  font-size: 1.3rem;
+  transition: transform .5s;
+  display: flex;
+  margin-top: 50px;
+}
+
+.menu__item {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --transform: rotate(-90deg);
+}
+
+.menu__item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  --transform: rotate(0);
+}
+
+.menu__link {
+  font-family: 'Exo', sans-serif;
+  color: var(--color3);
+  text-decoration: none;
+  margin: 10px 15px;
+  background-image: linear-gradient(90deg, rgb(12, 76, 156), #81c2fff3, rgb(236, 52, 52));
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  display: flex;
+  background-position: left bottom;
+  align-items: center;
+  font-weight: bold;
+  transition: background-size 700ms ease-in-out;
+
+}
+
+.menu__link:hover {
+  color: var(--color1);
+  background-size: 100% 3px;
+}
+
+.fa-whatsapp {
+  margin-left: 5px;
+}
+
+.menu__item_drow {
+  margin: 0;
+}
+
+.menu__arrow {
+  transform: var(--transform);
+  transition: transform .3s;
+  display: flex;
+  position: relative;
+}
+
+.menu__nesting {
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #ffffff;
+  list-style: none;
+  transition: clip-path .3s;
+  clip-path: var(--clip);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: max-content;
+  transform: translateY(100%);
+  z-index: 1100;
+}
+
+
+.menu__link--inside {
+  padding: 10px 100px 10px 20px;
+  color: var(--color3);
+}
+
+
+.menu__link--inside:hover {
+  color: var(--color2);
+  background-color: var(--color4);
+}
+
+.menu__hamburguer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu__img {
+  display: block;
+  width: 36px;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+}
+
+
+/* ?Slider  Principal Start */
+.slide-contenedor {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+.miSlider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 2s;
+  display: block;
+}
+
+.direcciones {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.direcciones a {
+  color: var(--color2);
+  display: inline-block;
+  padding: 20px;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.direcciones a:hover {
+  background: rgba(134, 132, 132, 0.5);
+  transition: .7s;
+}
+
+.barras {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.barra {
+  cursor: pointer;
+  height: 4px;
+  width: 25px;
+  margin: 0 2px;
+  background: #dcdde1;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.active {
+  background-color: var(--color2);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ?Slider  Principal End */
+/* ! Servicos Start */
+.Contenedor__principal_servicos {
+  position: relative;
+  background-color: rgba(201, 201, 201, 0.622);
+  margin: 10px auto;
+  align-items: center;
+}
+
+.container_inicios-servicos {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.container_imgservice {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.container_imgservice img {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+}
+
+.container_inicios-servicos h2 {
+  font-family: 'Amaranth', sans-serif;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.servicios_mayodent {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  width: 100%;
+}
+
+.card_servicios {
+  height: 200px;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.card_servicios .imagen_servicos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 60px;
+}
+
+.imagen_servicos img {
+  height: 100%;
+  width: 100%;
+}
+
+.info_servicio {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.fa-solid {
+  margin-right: 5px;
+}
+
+.info_servicio a {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color6);
+  font-weight: 700;
+  transition: ease-in-out .6s;
+}
+
+.info_servicio a:active,
+.info_servicio a:focus,
+.info_servicio a:hover {
+  background: linear-gradient(to right, rgba(232, 4, 4, 0.84), rgb(12, 52, 251));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info_servicio p {
+  font-size: 1rem;
+  padding: 10px;
+  justify-content: center;
+}
+
+/* ! Servicos End*/
+
+/*? Contactos Myodent start */
+.container__contacto {
+  padding-top: 20px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 100%;
+  height: 600px;
+  background-image: url('../imagenes/fondo02.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contacto_logo {
+  position: relative;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.contacto_logo img {
+  width: 90px;
+  height: 90px;
+}
+
+.container__contacto .textos_contactos {
+  margin-top: 50px;
+  font-size: 1.1rem;
+  font-weight: 1000;
+}
+
+.container__contacto .titulo {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 3rem;
+  color: var(--color2);
+}
+
+.container__contacto .subtitulo {
+  font-size: 1.3rem;
+  padding: 0 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: #798499;
+  font-weight: 700;
+  margin-top: 80px;
+}
+
+.container__contacto .boton {
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  margin: 0 30px;
+  margin-top: 50px;
+  color: #ffffff;
+  background: var(--color2);
+  border-radius: 40px;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: .5s ease;
+}
+
+.boton:hover {
+  background-color: var(--color1);
+}
+
+.container__contacto span {
+  position: absolute;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+
+  0% {
+    width: 0;
+    height: 0;
+    opacity: .2;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+
+}
+
+.sesgoabajo {
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 25vh 100vw;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.sesgoarriba {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 25vh 100vw 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*? Contactos Myodent end */
+/* start container recomendaciones */
+.container__recomendaciones {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  background-image: url('../imagenes/fond4.jpg');
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  margin-bottom: 80px;
+}
+
+.container_recomendaciones {
+  position: relative;
+  width: 100%;
+  top: 150px;
+}
+
+.container_recomendaciones h2 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Amaranth', sans-serif;
+}
+
+.text__area {
+  position: relative;
+  margin: 40px 0 20px 30px;
+  width: 100%;
+}
+
+.text_recomendacion {
+  font-weight: 600;
+  font-size: 1.4rem;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.text_recomendacion img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.container__smile {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.rotating-text {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 100;
+  font-size: 1.9rem;
+  color: #020203;
+  transform: translateX(-80px);
+}
+
+.rotating-text p {
+  display: inline-flex;
+  margin: 0;
+  vertical-align: top;
+}
+
+.rotating-text p .word {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+}
+
+.rotating-text p .word .letter {
+  transform-origin: center center 25px;
+}
+
+.rotating-text p .word .letter.out {
+  transform: rotateX(90deg);
+  transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+
+.rotating-text p .word .letter.in {
+  transition: 0.38s ease;
+}
+
+.rotating-text p .word .letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.w-1 {
+  color: #fa1900;
+}
+
+.w-2 {
+  color: #2f00ed;
+}
+
+.w-3 {
+  color: #750d98;
+}
+
+.logo_smile {
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.logo_smile img {
+  width: 180px;
+  height: 180px;
+}
+
+/* End container recomendaciones */
+/* Pagina Nostros container nosotros tart */
+.cantainer__nosotros {
+  display: flex;
+  width: 100%;
+  background-size: cover;
+}
+
+video {
+  top: 0;
+  position: relative;
+  height: 650px;
+  width: 100%;
+  z-index: -100;
+
+  object-fit: cover;
+  transition: 1s opacity;
+}
+
+.stopfade {
+  opacity: .8;
+}
+
+#MayoDent {
+  margin-top: 50px;
+  left: 700px;
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight: 100;
+  background: rgba(255, 255, 255, 0.447);
+  color: #020203;
+  padding: 2rem;
+  width: 33%;
+  height: 550px;
+  float: right;
+  font-size: 1.2rem;
+  border-radius: 0 60px;
+  position: absolute;
+}
+
+.mayo__superior {
+  color: #ff0b0beb;
+  font-size: 3rem;
+  font-family: 'Amaranth', sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+#MayoDent p {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.mayo__inferior {
+  color: #301adb;
+  font-size: 2.5rem;
+  font-family: 'Amaranth', sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: .3rem;
+}
+
+.wrap__link {
+  position: relative;
+  margin-top: -86px;
+  margin-left: -89px;
+  text-align: center;
+  margin: 20px 0 0 200px;
+}
+
+.button1 {
+  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  display: block;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 16px;
+  padding: 10px 20px;
+}
+
+.button1 {
+  color: rgba(255, 0, 0, 0.89);
+  box-shadow: rgba(255, 0, 0, 0.89) 0 0px 0px 2px inset;
+}
+
+.button1:hover {
+  color: rgba(255, 255, 255, 0.967);
+  box-shadow: rgba(255, 0, 0, 0.89) 0 0px 0px 40px inset;
+}
+
+.container__mision__vision {
+  position: relative;
+  display: flex;
+  background-color: rgba(244, 244, 244, 0.647);
+  width: 100%;
+  padding: 0 20px;
+  margin: 50px auto;
+}
+
+
+.misionvision__area {
+  text-align: center;
+  position: relative;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 20px 20px;
+}
+
+.logo__misionvision img {
+  width: 70px;
+  height: 70px;
+}
+
+.text__misionvision h2 {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color2);
+}
+
+.text__misionvision {
+  font-size: 1.2rem;
+  padding: 0 5px;
+  color: var(--color3);
+}
+
+.container__localizar {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  background-color: rgba(97, 93, 93, 0.205);
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.308);
+  margin: 100px auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.imagen_localizar h2 {
+  font-family: 'Amaranth', sans-serif;
+  padding-top: 50px;
+  font-size: 2rem;
+  color: var(--color2);
+  font-weight: 700;
+}
+
+.imagen_localizar img {
+  margin-top: 50px;
+  width: 400px;
+  height: 350px;
+  border-radius: 16px;
+  border: 4px solid var(--color2);
+}
+
+.texto_ubicacion {
+  margin: 30px auto;
+}
+
+.text_localizar {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color1);
+}
+
+.texto_ubicacion li {
+  list-style: none;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+
+/* Pagina Nostros container nosotros tart */
+
+/* Todo : Todos los container de todas especialidades */
+/* * Contenedor Principal Start */
+´.container_especialidades {
+  position: relative;
+  margin: 100px auto;
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.531);
+}
+
+.area__especialidad {
+  display: flex;
+  position: relative;
+  padding: 40px 40px;
+  background-color: rgba(227, 226, 226, 0.31);
+}
+
+.imagen__especialidad img {
+  height: 400px;
+  width: 400px;
+  border-radius: 16px;
+  margin: 150px 40px;
+  box-shadow: 2px 15px 20px -10px rgba(0, 0, 0, 1);
+}
+
+.info_area {
+  position: relative;
+  padding: 20px;
+}
+
+.especialidad__aarea {
+  padding: 30px;
+  box-shadow: 0 0 15px 0px rgba(166, 163, 163, 0.75);
+  border-radius: 16px;
+  transition: .7s ease;
+}
+
+.especialidad__aarea:hover {
+  box-shadow: 0 0 15px 0px var(--color8);
+}
+
+.texto1_especialidad h2 {
+  font-family: 'Amaranth', sans-serif;
+  padding-top: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--color2);
+}
+
+.texto1_especialidad p {
+  color: var(--color3);
+  font-size: 1.3rem;
+}
+
+.texto2__especialidad h2 {
+  font-family: 'Amaranth', sans-serif;
+  padding-top: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--color1);
+  text-align: center;
+}
+
+.texto2__especialidad p {
+  color: var(--color3);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.especialidad__aarea li {
+  list-style: none;
+}
+
+.content__item {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.button {
+  font-family: 'Amaranth', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.1rem 3rem;
+  margin: 60px 0 0 400px;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--pan {
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 3rem;
+  overflow: hidden;
+  color: #fff;
+}
+
+.button--pan span {
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.button--pan::before {
+  content: '';
+  background: var(--color7);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--pan:hover::before {
+  transform: translate3d(0, -100%, 0);
+}
+
+.button--anthe {
+  font-family: bely-display, sans-serif;
+  color: #fff;
+  background: none;
+}
+
+.button--anthe::before {
+  content: '';
+  background: var(--color7);
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+  transition: clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1), -webkit-clip-path 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover::before {
+  background: var(--color8);
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.button--anthe span {
+  display: block;
+  mix-blend-mode: difference;
+  transition: transform 0.4s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.button--anthe:hover span {
+  transform: translate3d(-10px, 0, 0);
+}
+
+/* * Contenedor Principal End */
+/* ? Crrusel de imagenes Start */
+.carrusel-imagenes {
+  margin: 100px auto;
+  margin-bottom: 50px;
+  height: auto;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.carrusel-items {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 30px 0px;
+}
+
+.carrusel-item {
+  min-width: 400px;
+  max-width: 400px;
+  height: 250px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-item:hover {
+  transform: scale(1.1);
+}
+
+/* ? Csrrusel de imagenes End */
+
+/* Todo : Todos los container de todas especialidades */
+/* ! Start footer */
+footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0 0;
+  transition: background 0.3s linear;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 40px;
+}
+
+.content__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profil .logo__area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo__area img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-radius: 2px solid var(--primary-color);
+}
+
+.logo__area .logo_name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 1rem;
+  color: var(--secundary-color);
+  font-family: 'Amaranth', sans-serif;
+}
+
+.logo__area button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.logo__area .sun {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.desc__area {
+  max-width: 400px;
+  margin-bottom: 1.25rem;
+}
+
+.desc__area p {
+  font-weight: 800px;
+  line-height: 20px;
+  color: rgb(94, 91, 91);
+  font-size: 1.1rem;
+}
+
+.socail__media a {
+  color: var(--secundary-color);
+  margin-right: 22px;
+  font-size: 25px;
+  transition: ease .3s;
+}
+
+.socail__media a:hover {
+  color: var(--color2);
+}
+
+.service__area {
+  display: flex;
+}
+
+.service__header {
+  margin-right: 50px;
+}
+
+.service_name {
+  padding-bottom: 5px;
+  color: var(--secundary-color);
+  font-weight: 600;
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.2rem;
+}
+
+.service__header li a {
+  color: rgb(94, 91, 91);
+  padding-bottom: 1px;
+  font-weight: 700;
+}
+
+.service__header li a:hover {
+  color: var(--color2);
+}
+
+.service__header li {
+  margin-bottom: 10px;
+}
+
+/* !End footer */
+
+@media screen and (max-width:800px) {
+  .menu {
+    left: 0;
+  }
+
+  #logopc {
+    display: none;
+  }
+
+  #logomovil {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    margin: auto 10px;
+  }
+
+  .menu__hamburguer {
+    display: flex;
+    right: 0;
+    margin-right: 20px;
+  }
+
+
+  .menu__item {
+    --clip: 0;
+    overflow: hidden;
+  }
+
+  .menu__item--active {
+    --transform: rotate(0);
+  }
+
+  .menu__item--show {
+    background-color: rgba(248, 28, 28, 0.777);
+  }
+
+
+  .menu__links {
+    position: fixed;
+    max-width: 400px;
+    width: 100%;
+    top: 120px;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(248, 28, 28, 0.777);
+    overflow-y: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    transform: translateX(100%);
+    z-index: 1200;
+  }
+
+  .menu__links--show {
+    transform: unset;
+    width: 100%;
+  }
+
+  .menu__link {
+    color: #ffffff;
+    padding: 25px 0;
+    padding-left: 30px;
+    height: auto;
+    font-size: 1rem;
+  }
+
+  .menu__link:hover {
+    color: var(--color3);
+  }
+
+  .menu__arrow {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .menu__nesting {
+    display: grid;
+    position: unset;
+    width: 100%;
+    padding-top: 0;
+    transform: translateY(0);
+    height: 0;
+    transition: height .3s;
+  }
+
+  .menu__link--inside {
+    color: var(--color3);
+    width: 90%;
+    margin-left: auto;
+    border-left: 1px solid #798499;
+  }
+
+
+  .content__footer {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .service__area {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .service__header {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  .socail__media {
+    margin-bottom: 1rem;
+  }
+
+  .container__contacto .subtitulo {
+    margin-top: 50px;
+  }
+
+  .sesgoabajo {
+    border-width: 0 0 15vh 100vw;
+  }
+
+  .sesgoarriba {
+    border-width: 15vh 100vw 0 0;
+  }
+
+  .rotating-text {
+    font-size: 1.6rem;
+    color: #020203;
+    transform: translateX(-50px);
+  }
+
+  .logo_smile img {
+    width: 300px;
+    height: 100px;
+  }
+
+  #MayoDent {
+    left: 50px;
+    padding: 2rem;
+    width: 60%;
+  }
+  .area__especialidad{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .slide-contenedor {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .direcciones a {
+    font-size: 1.3rem;
+  }
+
+  .servicios_mayodent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container__contacto {
+    padding-top: 10px;
+    height: 700px;
+  }
+
+  .contacto_logo {
+
+    margin: 10px auto;
+  }
+
+  .contacto_logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .container__contacto .textos_contactos {
+    margin-top: 20px;
+  }
+
+  .container__contacto .titulo {
+    font-size: 2rem;
+  }
+
+  .container__contacto .subtitulo {
+    font-size: 1.1rem;
+    padding: 0 10px;
+    margin-top: 40px;
+  }
+
+  .container__contacto .boton {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+
+  .container_recomendaciones {
+    justify-content: center;
+    position: relative;
+    top: 150px;
+  }
+
+  .container_recomendaciones h2 {
+    margin: 10px auto;
+    font-size: 1.9rem;
+  }
+
+  .text__area {
+    position: relative;
+    margin: 20px 0 20px 10px;
+    width: 100%;
+  }
+
+  .text_recomendacion {
+    font-size: 0.8rem;
+    padding-bottom: 7px;
+  }
+
+  .text_recomendacion img {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+  }
+
+  .container__smile {
+    margin-top: 60px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .rotating-text {
+    font-size: 1rem;
+    transform: translateX(-30px, 30px);
+  }
+
+  .logo_smile {
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .logo_smile img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #MayoDent {
+    left: 10px;
+    padding: 2rem;
+    width: 95%;
+    padding: 1.5rem;
+    height: 580px;
+    float: right;
+    font-size: 1.2rem;
+  }
+  .container__mision__vision{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .misionvision__area {
+    width: 100%;
+  }
+
+  .area__especialidad {
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    justify-content: center;
+  }
+  
+  .imagen__especialidad img {
+    height: 350px;
+    width: 350px;
+  }
+  
+  .info_area {
+    position: relative;
+    padding: 5px;
+  }
+  
+  .especialidad__aarea {
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  
+  .texto1_especialidad h2 {
+    padding-top: 21px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .texto1_especialidad p {
+    font-size: 0.9rem;
+  }
+  
+  .texto2__especialidad h2 {
+    font-family: 'Amaranth', sans-serif;
+    padding-top: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .texto2__especialidad p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .especialidad__aarea li {
+    list-style: none;
+  }
+  
+
+  
+  .button {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+    border: none;
+    padding: 0.8rem 3rem;
+    margin: 60px 0 0 50px;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+  }
+  
+
+  
+}

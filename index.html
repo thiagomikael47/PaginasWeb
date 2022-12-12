@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./estilos/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="contenedor_menu">
+      <nav class="menu">
+        <div class="menu__container">
+          <div class="container__logo">
+            <img src="./imagenes/mayo dent.png" id="logopc" alt="logoMayoDent">
+            <img src="./imagenes/imagen_mayo.png" id="logomovil" alt="LogoMayodent">
+          </div>
+          <ul class="menu__links">
+            <li class="menu__item">
+              <a href="index.html" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="./paginas/nosotros.html" class="menu__link">Nosotros</a>
+            </li>
+            <li class="menu__item  menu__item--show">
+              <a href="#" class="menu__link">Servicios <img src="./assets/arrow.svg" class="menu__arrow"></a>
+              <ul class="menu__nesting">
+                <li class="menu__inside">
+                  <a href="./paginas/odontopediatria.html" class="menu__link menu__link--inside">Odontopediatria</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/ortodoncia.html" class="menu__link menu__link--inside">Ortodoncia</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/curacion.html" class="menu__link menu__link--inside">Curaciones Esteticas</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/endodoncia.html" class="menu__link menu__link--inside">Endodoncia</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/extraccion-dental.html" class="menu__link menu__link--inside">Extraciones Dentales</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/protesis-dental.html" class="menu__link menu__link--inside">Protesis Dental</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/coronas.html" class="menu__link menu__link--inside">Coronas de Porcelana</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="./paginas/blanqueamiento.html" class="menu__link menu__link--inside">Blanqueamiento Dental</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a href="https://api.whatsapp.com/send?phone=997484669&text=Hola,quiaiera consultar por sus servicos dentales" class="menu__link">Contactanos <i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+          </ul>
+          <div class="menu__hamburguer">
+            <img src="./assets/menu.svg"class="menu__img">
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="contenedor_menu">
+      <div class="slide-contenedor">
+        <div class="miSlider fade">
+          <a href=""><img src="./imagenes/img1.jpg" alt="tratamiento dental ortodoncia"></a>
+        </div>
+        <div class="miSlider fade">
+          <a href=""><img src="./imagenes/img2.jpg" alt="Tratamiento dental"></a>
+        </div>
+        <div class="miSlider fade">
+          <a href=""><img src="./Imagenes/img3.jpg" alt="Implantes de porcelana"></a>
+        </div>
+        <div class="miSlider fade">
+          <a href=""><img src="./Imagenes/img4.jpg" alt="Odontopediatria"></a>
+        </div>
+        <div class="direcciones">
+          <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+          <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+        </div>
+        <div class="barras">
+          <span class="barra active" onclick="posicionSlide(1)"></span>
+          <span class="barra" onclick="posicionSlide(2)"></span>
+          <span class="barra" onclick="posicionSlide(3)"></span>
+          <span class="barra" onclick="posicionSlide(4)"></span>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor_menu">
+      <section class="Contenedor__principal_servicos">
+        <div class="container_inicios-servicos">
+          <div class="container_imgservice">
+            <img src="./imagenes/diente.png " alt="Servicos Dentales Odontopediatria">
+          </div>
+          <h2>Servicios</h2>
+        </div>
+        <div class="servicios_mayodent">
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/odontopediatria.png" alt="Servicio dental odontopediatria">
+            </div>
+            <div class="info_servicio">
+             <a href="./paginas/odontopediatria.html"><i class="fa-solid fa-circle-plus"></i>Odontopediatria</a>
+              <p>Porque toda buena prevención y educación empieza desde nuestros niños la importancia de su cuidado bucal.</p>
+            </div>
+          </div>
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/ortodoncia.png" alt="servicio dental ortodoncia">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/ortodoncia.html"><i class="fa-solid fa-circle-plus"></i>Ortodoncia</a>
+              <p>La alineacion de nuestros dientes brindara una sonrisa perfecta.</p>
+            </div>
+          </div>
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/curacion.png" alt="Tratamiento dental Curaciones esteticos">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/curacion.html"><i class="fa-solid fa-circle-plus"></i>Curaciones Esteticas</a>
+              <p>La curacon estetica le brindara el reemplazo enparte del diente deteriorado</p>
+            </div>
+          </div>
+        </div>
+        <div class="servicios_mayodent">
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/endodoncia.png" alt="servicio dental endodoncia">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/endodoncia.html"><i class="fa-solid fa-circle-plus"></i>Endodoncia</a>
+              <p>Brindar una oportunidad a nuestros dientes nos dara mas confianza al sonreir</p>
+            </div>
+          </div>
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/extracccion.png" alt="servicio dental extracccion dental">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/extraccion-dental.html"><i class="fa-solid fa-circle-plus"></i>Extraciones dentales</a>
+              <p>Dependiendo de la gravedad del deterioro a veces esmjor retirar el diente.</p>
+            </div>
+          </div>
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/protesisdental.png" alt="Servicio dental protesis-dental">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/protesis-dental.html"><i class="fa-solid fa-circle-plus"></i>Protesis dental</a>
+              <p>Recuperar tu sonrisa es nuestra prioridad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="servicios_mayodent">
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/protesisporcelana.png" alt="Servicio dental protesis-dental">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/coronas.html"><i class="fa-solid fa-circle-plus"></i>Coronas de porcelana</a>
+              <p>Si quieres tener la sonrisa perfecta y volver a tener la confianza en tu sonrisatu mejor opcion.</p>
+            </div>
+          </div>
+          <div class="card_servicios">
+            <div class="imagen_servicos">
+              <img src="./imagenes/blanqueamiento.png" alt="servicio dental blanqueamiento dental">
+            </div>
+            <div class="info_servicio">
+              <a href="./paginas/blanqueamiento.html"><i class="fa-solid fa-circle-plus"></i>Blanqueamiento Dental</a>
+              <p>Para lucir unos dientes más blancos no basta solo con tener un blanqueador de dientes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="contenedor_menu">
+      <Section class="container__contacto">
+        <div class="contacto_logo">
+          <img src="./imagenes/imagen_mayo.png" alt="Atencion de nuestro contacto reservar cita">
+        </div>
+        <div class="textos_contactos">
+          <h2 class="titulo">Consultas en Mayo Dent</h2>
+          <p class="subtitulo">Aplicamos la última tecnología y las técnicas más vanguardistas para ofrecer a todos nuestros pacientes los mejores resultados y asi brindarles un servicio de calidad donde resalte su belleza como tambien mejore su salud</p>
+          <a href="https://api.whatsapp.com/send?phone=997484669&text=Hola,quiaiera consultar por sus servicos dentales" class="boton">Resgistre su Cita</a>
+      </div>
+      <div class="sesgoabajo"></div>
+      </Section>
+    </div>
+    <div class="contenedor_menu">
+      <section class="container__recomendaciones">
+        <div class="sesgoarriba"></div>
+        <div class="container_recomendaciones">
+          <h2>Reomendaciones para una buena higiene bucal</h2>
+          <div class="text__area">
+            <ul class="area__recomendacion">
+              <li class="text_recomendacion"> <img src="./imagenes/cepillardientes.png" alt="cepillo">Cepilla tus dientes , encias , y lengua despues de cada comida</li>
+              <li class="text_recomendacion"><img src="./imagenes/hilo-dental.png" alt="hilo dental">Usa hilo dental al menos una vez al dia.</li>
+              <li class="text_recomendacion"><img src="./imagenes/cepillado-de-dientes.png" alt="cepillar diente">El cepillado de durar como minimo 2 minutos.</li>
+              <li class="text_recomendacion"><img src="./imagenes/dulces.png" alt="exceso de dulce">Evita el exceso de consumo de azucar.</li>
+            </ul>
+          </div>
+          <div class="container__smile">
+            <div class="rotating-text">
+              <p>"Conserva tu sonrisa, por que transmites</p>
+              <p>
+                <span class="word w-1">Alegria."</span>
+                <span class="word w-2">Felicidad."</span>
+                <span class="word w-3">Seguridad."</span>
+              </p>
+            </div>
+          </div>
+          <div class="logo_smile">
+            <img src="./imagenes/smile02.png" alt="Smile">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="content__footer">
+        <div class="profil">
+          <div class="logo__area">
+            <img src="./imagenes/logonegro.png" alt="">
+            <span class="logo_name">MayoDent</span>
+            <button id="dark-mode" class="moon"><i class='bx bxs-moon'></i></button>
+            <button id="light-mode" class="sun hide"><i class='bx bx-sun' ></i></button>
+          </div>
+        <div class="desc__area">
+          <p>En Mayodent trabajamoscon la filosofia de ser la mejor clinica odontologica lider en la Salud bucal del Cono Este de Lima , por brindar tratamientos especializados de la mas alta calidad.</p>
+        </div>
+        <div class="socail__media">
+          <a href=""><i class='bx bxl-whatsapp'></i></box-icon></a>
+          <a href=""><i class='bx bxl-facebook'></i></a>
+          <a href=""><i class='bx bxl-instagram'></i></a>
+          <a href=""><i class='bx bxl-tiktok'></i></a>
+        </div>
+      </div>
+      <div class="service__area">
+        <ul class="service__header">
+          <li class="service_name">Servicios dentales :</li>
+          <li><a href="">Ortodoncia</a></li>
+          <li><a href="">Endodoncia</a></li>
+          <li><a href="">Protesis Dental</a></li>
+          <li><a href="">Curacion Estetica</a></li>
+          <li><a href="">Implantes de Porcelana</a></li>
+        </ul>
+        <ul class="service__header">
+          <li class="service_name">Contacto :</li>
+          <li><a href="">Direccion : Av. Francisco Bolognesi 1076</a></li>
+          <li><a href="">Los Ficus - Santa Anita</a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=997484669&text=Hola,quiaiera consultar por sus servicos dentales">Celular : 997484669</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </footer>
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/slider.js"></script>
+  <script src="./scripts/boton.js"></script>
+  <script src="./scripts/dark-mode.js"></script>
+</html>
