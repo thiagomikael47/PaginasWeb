@@ -737,7 +737,22 @@ video {
   padding: 0 5px;
   color: var(--color3);
 }
-
+.container_profesional{
+  position: relative;
+  width: 100%;
+  background-color: rgba(97, 93, 93, 0.205);
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.308);
+  margin: 50px auto;
+  justify-content: center;
+  text-align: center;
+}
+.container_profesional>h2{
+  color: var(--color2);
+  font-family: 'Amaranth', sans-serif;
+  padding-top: 50px;
+  font-size: 2.3rem;
+  text-align: center;
+}
 .container__localizar {
   position: relative;
   width: 100%;
@@ -748,7 +763,24 @@ video {
   text-align: center;
   justify-content: center;
 }
+.personalize_autor img{
+  box-shadow: 0 16px 70px -8px rgba(0, 0, 0, 0.308);
+  width: 300px;
+  height: 350px;
+  margin: 50px auto;
+  border-radius: 16px;
+  border: 2px solid rgba(142, 141, 141, 0.819);
+  overflow: hidden;
+}
 
+.texto_profesional{
+  padding: 30px 0;
+}
+.texto_profesional h2{
+  font-family: 'Amaranth', sans-serif;
+  font-size: 1.7rem;
+  padding-bottom: 3px;
+}
 .imagen_localizar h2 {
   font-family: 'Amaranth', sans-serif;
   padding-top: 50px;
