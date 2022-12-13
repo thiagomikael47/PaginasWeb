@@ -545,7 +545,7 @@ main {
 .rotating-text {
   font-family: 'Permanent Marker', cursive;
   font-weight: 100;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #020203;
   transform: translateX(-80px);
 }
