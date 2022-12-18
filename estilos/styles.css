@@ -145,8 +145,7 @@ body {
 
 .menu__nesting {
   overflow: hidden;
-  border-radius: 6px;
-  background-color: #ffffff;
+  background-color: #ffffff ;
   list-style: none;
   transition: clip-path .3s;
   clip-path: var(--clip);
@@ -160,7 +159,7 @@ body {
 
 
 .menu__link--inside {
-  padding: 10px 100px 10px 20px;
+  padding: 20px 30px;
   color: var(--color3);
 }
 
@@ -1374,8 +1373,8 @@ footer li {
   }
 
   .rotating-text {
-    font-size: 1rem;
-    transform: translateX(-30px, 30px);
+    font-size: 0.9rem;
+    transform: translateX(-50%, -50%);
   }
 
   .logo_smile {
